@@ -4,8 +4,6 @@
 
 > Think of it as a combination of a sitemap, UI map, and user flow spec — all in one.
 
----
-
 ## 🚀 What Problem Does Clickmap Solve?
 
 Creating and maintaining automated end-to-end (E2E) browser test scripts is time-consuming and fragile:
@@ -100,3 +98,49 @@ Each journey describes a **high-level E2E user flow** (no loops or logic) by ref
     }
   ]
 }
+```
+## 🛠 Tooling Support
+
+Clickmap is designed to work with a variety of tools and workflows:
+
+- ✅ Human-authored specs (JSON)
+- ✅ Generated via browser extension, LLM, or scraper
+- ✅ Interpreted by AI agents to generate tests
+- ✅ Read by custom test runners or pipelines
+
+## 🌍 Goals
+
+- Simple and lightweight format
+- Encourages collaboration between QAs, devs, and AI tools
+- Friendly to versioning and code review
+- Enables zero-manual-setup automation test creation
+
+## 📁 Repo Structure
+
+```
+clickmap/
+├── clickmap.schema.json # JSON Schema definition
+├── examples/
+│ └── room-booking.clickmap.json
+├── docs/
+│ └── spec.md # Human-readable format guide
+└── README.md # This file
+```
+
+## 📅 Roadmap
+
+- [x] v0.1 JSON Schema  
+- [ ] Browser extension to auto-generate Clickmap  
+- [ ] CLI tool to validate/generate Clickmaps  
+- [ ] AI agent integration (OpenAI, Claude, etc.)  
+- [ ] VSCode extension support  
+
+## 📖 Learn More
+
+- 📘 [Specification](./docs/spec.md)  
+- 📂 [Schema File](./clickmap.schema.json)  
+- 🧪 [Examples](./examples)
+
+## 🪪 License
+
+MIT — free to use, extend, and adapt.  
