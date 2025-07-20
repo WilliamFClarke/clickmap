@@ -1,1 +1,60 @@
 
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Clickmap",
+  "description": "Clickmap v0.1 – a format for describing page structure, UI selectors, and user journeys.",
+  "type": "object",
+  "required": ["pages"],
+  "properties": {
+    "pages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "url", "elements"],
+        "properties": {
+          "id": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "elements": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["name", "selectors"],
+              "properties": {
+                "name": { "type": "string" },
+                "selectors": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                }
+              }
+            }
+          },
+          "linksTo": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "journeys": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "steps"],
+        "properties": {
+          "name": { "type": "string" },
+          "steps": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["pageId", "elementName"],
+              "properties": {
+                "pageId": { "type": "string" },
+                "elementName": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
