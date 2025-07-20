@@ -15,5 +15,3 @@ The format is a single JSON file with two top-level keys:
 
 - `pages`: all known pages and their selectors
 - `journeys`: step-by-step sequences representing flows
-
-See [`clickmap.schema.json`](../clickmap.schema.json) for details.
